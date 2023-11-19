@@ -21,7 +21,7 @@ public class NextStageUIScript : MonoBehaviour
         {
             nextStageButton.interactable = false;//스테이지가 마지막 스테이지일 경우 다음 스테이지 버튼 비활성화
         }
-        stage.text = "Stage " + GameManager.gameManager.currentStage + 1;
+        stage.text = "Stage " + (GameManager.gameManager.currentStage + 1);
         if(GameManager.gameManager.currentScore == GameManager.gameManager.StageRecord[GameManager.gameManager.currentStage])
         {
             score.text = "Score: " + GameManager.gameManager.currentScore;//최고 기록일 경우 현재 점수만

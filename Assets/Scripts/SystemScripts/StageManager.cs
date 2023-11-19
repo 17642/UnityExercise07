@@ -47,6 +47,7 @@ public class StageManager : MonoBehaviour
     }
     public void FinishStage()
     {
+        GameManager.gameManager.StageClear[GameManager.gameManager.currentStage] = true;
         GameManager.gameManager.ScoreUpdate(GameManager.gameManager.currentStage, StageScore);
         GameManager.gameManager.TogglePlay(false);
         GameManager.gameManager.loader.LoadScene("NextStage", UnityEngine.SceneManagement.LoadSceneMode.Additive);

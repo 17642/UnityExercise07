@@ -10,7 +10,7 @@ public class GameOverUIScript : MonoBehaviour
     TextMeshProUGUI Stage;
     private void Start()
     {
-        Stage.text = "Stage " + GameManager.gameManager.currentStage; 
+        Stage.text = "Stage "+(GameManager.gameManager.currentStage + 1); 
     }
     public void RestartButtonScript()
     {
