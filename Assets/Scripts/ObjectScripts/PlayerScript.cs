@@ -22,12 +22,12 @@ public class PlayerScript : MonoBehaviour
     [SerializeField]
     private float animationInputVar=0.1f;
 
-
     Animator animator;
 
     bool playerIsMoving = false;
     bool playerOnGround = false;
     bool playerLookingRight = true;
+
 
     float ShotTime = 0;
     float horizontalInput;

@@ -180,6 +180,7 @@ MonoBehaviour:
   ShotDelay: 0
   Projectile: {fileID: 4031405309644160477, guid: ca212f1689855cf4283c8b10b987d128, type: 3}
   ProjLocationY: 0.6
+  animationInputVar: 0.1
 --- !u!114 &-7065149946644017396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 3
   stageManager: {fileID: 0}
+  imminueTime: 1
   currentHealth: 0
 --- !u!95 &3313338940054117016
 Animator:

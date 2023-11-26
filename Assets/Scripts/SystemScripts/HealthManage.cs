@@ -8,8 +8,11 @@ public class HealthManage : MonoBehaviour
     public float MaxHealth;
     [SerializeField]
     StageManager stageManager;
+    [SerializeField]
+    private float imminueTime=0.5f;
 
     public float currentHealth;
+    float imminueCounter = 0;
 
     private void Start()
     {
@@ -18,7 +21,11 @@ public class HealthManage : MonoBehaviour
     // Start is called before the first frame update
     public void TakeDamage(float dmg)
     {
-        currentHealth -= dmg;
+        if (imminueCounter == 0)
+        {
+            currentHealth -= dmg;
+            imminueCounter = imminueTime;
+        }
     }
 
     public void Dead()
@@ -36,6 +43,14 @@ public class HealthManage : MonoBehaviour
 
     private void Update()
     {
+        if (imminueCounter > 0)
+        {
+            imminueCounter -= Time.deltaTime;
+            if (imminueCounter < 0)
+            {
+                imminueCounter = 0;
+            }
+        }
         if (currentHealth <= 0)
         {
             Dead();
