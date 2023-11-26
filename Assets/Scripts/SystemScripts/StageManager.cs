@@ -42,8 +42,16 @@ public class StageManager : MonoBehaviour
         if (scoreReduceCounter <= 0)
         {
             scoreReduceCounter = 1;
-            StageScore -= ScoreMinSeconds;
+            if (StageScore - ScoreMinSeconds <= 0)
+            {
+                StageScore = 0;
+            }
+            else
+            {
+                StageScore -= ScoreMinSeconds;
+            }
         }
+        
     }
     public void FinishStage()
     {

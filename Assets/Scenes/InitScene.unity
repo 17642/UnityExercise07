@@ -153,9 +153,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StageCnt: 3
+  currentStage: 0
+  currentScore: 0
   StageClear: 
   StageRecord: 
   isGravityReversed: 0
+  isGamePlaying: 0
+  isGamePaused: 0
 --- !u!4 &1462954538
 Transform:
   m_ObjectHideFlags: 0

@@ -19,6 +19,8 @@ public class PlayerScript : MonoBehaviour
     GameObject Projectile;
     [SerializeField]
     private float ProjLocationY;
+    [SerializeField]
+    private float animationInputVar=0.1f;
 
 
     Animator animator;
@@ -65,11 +67,11 @@ public class PlayerScript : MonoBehaviour
     void PlayerMove()
     {
         horizontalInput = Input.GetAxis("Horizontal");
-        if (horizontalInput < 0)
+        if (horizontalInput < animationInputVar*-1)
         {
             playerLookingRight = false;
         }
-        else if(horizontalInput > 0)
+        else if(horizontalInput > animationInputVar)
         {
             playerLookingRight = true;
         }
